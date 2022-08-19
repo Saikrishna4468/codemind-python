@@ -1,7 +1,6 @@
 s=input()
-s=s.lower()
-c=[]
+s=s.lower().replace(" ","")
+s=sorted(s)
 for i in s:
-    if i not in c:
-        c.append(i)
-print("".join(sorted(c)).replace(" ",""))
+    if s.count(i)==1:
+        print(i,end="")
